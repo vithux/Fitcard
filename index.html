@@ -1,0 +1,152 @@
+<html lang="pt-br">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>FITCARD</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+
+	<body>
+
+    <header>
+      <div class="container">
+        <h1>Cadastro</h1>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <h2>Minhas Empresas</h2>
+				<div class="grupo">
+						<label for="filtro">Filtro:</label>
+						<input id="filtro" name="filtro" type="text" placeholder="Filtro" class="campo">
+				</div>
+				<table>
+          <thead>
+            <tr>
+              <th>Razão Social</th>
+              <th>Nome Fantasia</th>
+              <th>CNPJ</th>
+              <th>E-mail</th>
+              <th>Endereço</th>
+							<th>Cidade</th>
+							<th>Estado</th>
+							<th>telefone</th>
+							<th>Data de Cadastro</th>
+							<th>Categoria</th>
+							<th>Status</th>
+							<th>Agência</th>
+							<th>Conta</th>
+							<th>Opções</th>
+            </tr>
+          </thead>
+
+					<tbody id="tabela-empresas">
+
+				  </tbody>
+        </table>
+
+      </section>
+
+		</main>
+
+	</section>
+
+
+
+<section class="container">
+	<h2 id="titulo-form">Adicionar uma nova Empresa</h2>
+	<ul id="erro"></ul>
+	<form id="form-adiciona">
+			<div class="grupo-master">
+					<label for="social">Razão Social:</label>
+					<input id="social" name="social" type="text" placeholder="Razão Social" class="campo">
+			</div>
+
+			<div class="grupo-master">
+					<label for="fantasia">Nome Fantasia:</label>
+					<input id="fantasia" name="fantasia" type="text" placeholder="Nome Fantasia" class="campo">
+			</div>
+
+			<div class="grupo">
+					<label for="cnpj">CNPJ:</label>
+					<input id="cnpj" name="cnpj" type="text" placeholder="CNPJ" class="campo">
+			</div>
+
+			<div class="grupo">
+					<label for="email">E-Mail:</label>
+					<input id="email" name="email" type="text" placeholder="E-mail" class="campo">
+			</div>
+
+			<div class="grupo">
+					<label for="endereco">Endereço:</label>
+					<input id="endereco" name="endereco" type="text" placeholder="Endereço" class="campo">
+			</div>
+
+			<div class="grupo">
+					<label for="cidade">Cidade:</label>
+					<input id="cidade" name="cidade" type="text" placeholder="Cidade" class="campo">
+			</div>
+
+			<div class="grupo">
+					<label for="estado">Estado:</label>
+					<input id="estado" name="estado" type="text" placeholder="Estado" class="campo">
+			</div>
+
+			<div class="grupo">
+					<label for="telefone">Telefone:</label>
+					<input id="telefone" name="telefone" type="text" placeholder="Telefone" class="campo">
+			</div>
+
+			<div class="grupo">
+					<label for="categoria">Categoria:</label>
+					<select id="categoria" name="categoria" class="campo">
+			  		<option value="supermercado">Supermercado</option>
+			  		<option value="restaurante">Restaurante</option>
+			  		<option value="borracharia">Borracharia</option>
+			  		<option value="posto">Posto</option>
+						<option value="oficina">Oficina</option>
+					</select>
+			</div>
+
+			<div class="grupo">
+					<label for="status">Status:</label>
+					<select id="status" name="status" class="campo">
+			  		<option value="ativo">Ativo</option>
+			  		<option value="inativo">Inativo</option>
+					</select>
+			</div>
+
+			<div class="grupo">
+					<label for="agencia">Agência:</label>
+					<input id="agencia" name="agencia" type="text" placeholder="Agência" class="campo">
+			</div>
+
+			<div class="grupo">
+					<label for="conta">Conta:</label>
+					<input id="conta" name="conta" type="text" placeholder="Conta" class="campo">
+			</div>
+
+
+
+
+			<button id="adicionar-empresa" class="botao bto-principal">Adicionar</button>
+	</form>
+</section>
+
+</main>
+
+
+
+    <script src="js/principal.js"></script>
+		<script src="js/formAdicionaEmpresa.js"></script>
+		<script src="js/removeEmpresa.js"></script>
+		<script src="js/filtraEmpresa.js"></script>
+		<script src="js/formataCampo.js"></script>
+
+  </body>
+
+  </html>
