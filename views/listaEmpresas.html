@@ -1,0 +1,67 @@
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>FITCARD - Empresas Cadastradas</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+
+	<body>
+
+    <header>
+      <div class="container">
+        <h1>Cadastro</h1>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <h2>Minhas Empresas</h2>
+				<div class="grupo">
+						<label for="filtro">Filtro:</label>
+						<input id="filtro" name="filtro" type="text" placeholder="Filtro" class="campo">
+				</div>
+				<table>
+          <thead>
+            <tr>
+              <th>Razão Social</th>
+              <th>Nome Fantasia</th>
+              <th>CNPJ</th>
+              <th>E-mail</th>
+              <th>Endereço</th>
+							<th>Cidade</th>
+							<th>Estado</th>
+							<th>telefone</th>
+							<th>Data de Cadastro</th>
+							<th>Categoria</th>
+							<th>Status</th>
+							<th>Agência</th>
+							<th>Conta</th>
+							<th>Opções</th>
+            </tr>
+          </thead>
+
+					<tbody id="tabela-empresas">
+
+				  </tbody>
+        </table>
+
+      </section>
+
+		</main>
+
+	</section>
+
+
+</main>
+
+
+    <script src="js/formAdicionaEmpresa.js"></script>
+		<script src="js/removeEmpresa.js"></script>
+		<script src="js/filtraEmpresa.js"></script>
+		<script src="js/buscaEmpresas.js"></script>
+
+  </body>
+
+  </html>

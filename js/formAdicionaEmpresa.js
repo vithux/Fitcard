@@ -12,10 +12,7 @@ botaoAdicionar.addEventListener("click", function(event){
     return 0;
   }
 
-  //monta uma Tr e adiciona na tabela-empresas
-  var empresaTr = montaTr(empresa);
-  var tabela = document.querySelector("#tabela-empresas");
-  tabela.appendChild(empresaTr);
+  adicionaEmpresa(empresa);
   form.reset();
   document.querySelector("#erro").innerHTML = "";
 });
@@ -84,7 +81,7 @@ function empresaValida(empresa){
   var mensagemErro = [];
 
   if (empresa.razaoSocial.length == 0 || empresa.cnpj.length == 0) {
-    mensagemErro.push("Empresa e CNPJ são campos obrigatórios!");
+    mensagemErro.push("Razão Social e CNPJ são campos obrigatórios!");
   }
 
   if(empresa.categoria == "supermercado" && empresa.telefone.length == 0){
@@ -105,4 +102,10 @@ function exibeMensagemErro(erros){
     ul.appendChild(li);
   });
 
+}
+
+function adicionaEmpresa(empresa){
+  var empresaTr = montaTr(empresa);
+  var tabela = document.querySelector("#tabela-empresas");
+  tabela.appendChild(empresaTr);
 }
