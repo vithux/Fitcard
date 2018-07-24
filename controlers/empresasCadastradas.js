@@ -1,11 +1,7 @@
-var conectaBanco = require('C:/Users/vitor/Desktop/FitCard/infra/conectaBanco');
+var selectBanco = require("C:/Users/vitor/Desktop/FitCard/model/selectBancoDados");
 
 module.exports = function(app) {
   app.get('/empresasCadastradas',function (req,res) {
-    var connection = conectaBanco();
-    connection.query('select * from empresas', function(err,results){
-      res.send(results);
-    });
-    connection.end();
+    res.send(selectBanco());
   });
 }

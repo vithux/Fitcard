@@ -14,7 +14,7 @@
 
     <header>
       <div class="container">
-        <h1>Cadastro</h1>
+        <h1>FiTCARD</h1>
       </div>
     </header>
     <main>
@@ -22,7 +22,7 @@
 <section class="container">
 	<h2 id="titulo-form">Adicionar uma nova Empresa</h2>
 	<ul id="erro"></ul>
-	<form id="form-adiciona">
+	<form id="form-adiciona" action="/cadastraEmpresa/post" method="post">
 			<div class="grupo-master">
 					<label for="social">Razão Social:</label>
 					<input id="social" name="social" type="text" placeholder="Razão Social" class="campo">
@@ -95,7 +95,7 @@
 
 
 
-			<button id="adicionar-empresa" class="botao bto-principal">Adicionar</button>
+			<button id="adicionar-empresa" class="botao bto-principal" type="submit" >Adicionar</button>
 	</form>
 </section>
 

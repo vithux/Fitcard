@@ -1,7 +1,7 @@
 //ação do botão adicionar
 var botaoAdicionar = document.querySelector("#adicionar-empresa");
 botaoAdicionar.addEventListener("click", function(event){
-  event.preventDefault();
+
   //pega as informações digitadas no form e adiciona ao objeto empresa
   var form = document.querySelector("#form-adiciona");
   var empresa = obtemEmpresaDoForm(form);
@@ -9,11 +9,11 @@ botaoAdicionar.addEventListener("click", function(event){
   var validaErros = empresaValida(empresa);
   if (validaErros.length > 0){
     exibeMensagemErro(validaErros);
+    event.preventDefault();
     return 0;
   }
 
-  adicionaEmpresa(empresa);
-  form.reset();
+
   document.querySelector("#erro").innerHTML = "";
 });
 
@@ -88,6 +88,12 @@ function empresaValida(empresa){
     mensagemErro.push("Para Supermercado o Telefone deve ser preenchido!");
   }
 
+  console.log(validarCNPJ(empresa.cnpj));
+  if (!validarCNPJ(empresa.cnpj)){
+    mensagemErro.push("CNPJ Inválido!");
+  }
+
+
   return mensagemErro;
 }
 
@@ -108,4 +114,47 @@ function adicionaEmpresa(empresa){
   var empresaTr = montaTr(empresa);
   var tabela = document.querySelector("#tabela-empresas");
   tabela.appendChild(empresaTr);
+}
+
+
+function validarCNPJ(cnpjExterno) {
+
+    cnpj = cnpjExterno.replace(/[^\d]+/g,'');
+    if(cnpj == '') return false;
+    if (cnpj.length != 14)
+        return false;
+
+    // Valida DVs
+    tamanho = cnpj.length - 2
+    numeros = cnpj.substring(0,tamanho);
+    digitos = cnpj.substring(tamanho);
+    soma = 0;
+    pos = tamanho - 7;
+    for (i = tamanho; i >= 1; i--) {
+      soma += numeros.charAt(tamanho - i) * pos--;
+      if (pos < 2)
+            pos = 9;
+    }
+    resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+    if (resultado != digitos.charAt(0))
+        return false;
+
+    tamanho = tamanho + 1;
+    numeros = cnpj.substring(0,tamanho);
+    soma = 0;
+    pos = tamanho - 7;
+    for (i = tamanho; i >= 1; i--) {
+      soma += numeros.charAt(tamanho - i) * pos--;
+      if (pos < 2)
+            pos = 9;
+    }
+    resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+    if (resultado != digitos.charAt(1)){
+          return false;
+
+        }
+
+    return true;
+
+
 }
