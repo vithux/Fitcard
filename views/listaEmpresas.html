@@ -55,11 +55,91 @@
 	</section>
 
 
+	<section class="container">
+		<section class="form">
+		<h2 id="titulo-form">Detalhes</h2>
+		<ul id="erro"></ul>
+		<form id="form-adiciona" action="/" method="get">
+				<div class="grupo-master">
+						<label for="social">Razão Social:</label>
+						<input id="social" name="social" type="text" placeholder="Razão Social" class="campo" readonly>
+				</div>
+
+				<div class="grupo-master">
+						<label for="fantasia">Nome Fantasia:</label>
+						<input id="fantasia" name="fantasia" type="text" placeholder="Nome Fantasia" class="campo" readonly>
+				</div>
+
+				<div class="grupo">
+						<label for="cnpj">CNPJ:</label>
+						<input id="cnpj" name="cnpj" type="text" placeholder="CNPJ" class="campo" readonly>
+				</div>
+
+				<div class="grupo">
+						<label for="email">E-Mail:</label>
+						<input id="email" name="email" type="text" placeholder="E-mail" class="campo" readonly>
+				</div>
+
+				<div class="grupo">
+						<label for="endereco">Endereço:</label>
+						<input id="endereco" name="endereco" type="text" placeholder="Endereço" class="campo" readonly>
+				</div>
+
+				<div class="grupo">
+						<label for="cidade">Cidade:</label>
+						<input id="cidade" name="cidade" type="text" placeholder="Cidade" class="campo" readonly>
+				</div>
+
+				<div class="grupo">
+						<label for="estado">Estado:</label>
+						<input id="estado" name="estado" type="text" placeholder="Estado" class="campo" readonly>
+				</div>
+
+				<div class="grupo">
+						<label for="telefone">Telefone:</label>
+						<input id="telefone" name="telefone" type="text" placeholder="Telefone" class="campo" readonly>
+				</div>
+
+				<div class="grupo">
+						<label for="categoria">Categoria:</label>
+						<select id="categoria" name="categoria" class="campo" readonly>
+				  		<option value="Supermercado">Supermercado</option>
+				  		<option value="Restaurante">Restaurante</option>
+				  		<option value="Borracharia">Borracharia</option>
+				  		<option value="Posto">Posto</option>
+							<option value="Oficina">Oficina</option>
+						</select>
+				</div>
+
+				<div class="grupo">
+						<label for="status">Status:</label>
+						<select id="status" name="status" class="campo" readonly>
+				  		<option value="Ativo">Ativo</option>
+				  		<option value="Inativo">Inativo</option>
+						</select>
+				</div>
+
+				<div class="grupo">
+						<label for="agencia">Agência:</label>
+						<input id="agencia" name="agencia" type="text" placeholder="Agência" class="campo" readonly>
+				</div>
+
+				<div class="grupo">
+						<label for="conta">Conta:</label>
+						<input id="conta" name="conta" type="text" placeholder="Conta" class="campo" readonly>
+				</div>
+
+				<button id="retornar" class="botao bto-principal">Retornar</button>
+		</form>
+	</section>
+	</section>
+
+
 </main>
 
 
     <script src="js/formAdicionaEmpresa.js"></script>
-		<script src="js/removeEmpresa.js"></script>
+		<script src="js/detalhesEmpresa.js"></script>
 		<script src="js/filtraEmpresa.js"></script>
 		<script src="js/buscaEmpresas.js"></script>
 
