@@ -18,7 +18,7 @@ botaoAdicionar.addEventListener("click", function(event){
 });
 
 //recebe uma empresa e cria o HTML para adicionar em uma tabela
-function montaTr(empresa){
+function montaTr(empresa,textoBotao){
     var empresaTr = document.createElement("tr");
     empresaTr.classList.add("empresa");
 
@@ -42,8 +42,7 @@ function montaTr(empresa){
 function adicionaBotao(){
   var td = document.createElement("td");
   var botao = document.createElement("button");
-  botao.textContent = "Delete";
-  botao.classList.add("botao-delete");
+  botao.classList.add("botao-opcoes");
   td.appendChild(botao);
   return td;
 }
@@ -88,9 +87,12 @@ function empresaValida(empresa){
     mensagemErro.push("Para Supermercado o Telefone deve ser preenchido!");
   }
 
-  console.log(validarCNPJ(empresa.cnpj));
   if (!validarCNPJ(empresa.cnpj)){
     mensagemErro.push("CNPJ Inválido!");
+  }
+
+  if(!validaEmail(empresa.email)){
+    mensagemErro.push("E-Mail Inválido!");
   }
 
 
@@ -155,6 +157,12 @@ function validarCNPJ(cnpjExterno) {
         }
 
     return true;
+}
 
-
+function validaEmail(emailExterno){
+  if( emailExterno == "" || emailExterno.indexOf('@')==-1 || emailExterno.indexOf('.')==-1 )	{
+  		return false;
+  	}else {
+      return true;
+    }
 }

@@ -8,7 +8,6 @@ body{
 }
 
 header{
-
 	height: 5em;
 	color: #FFF;
 	margin-bottom: 1em;
@@ -122,11 +121,8 @@ button{
 	color: red;
 }
 
-.botao-delete{
-	background-color: red;
-	width: 100%;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
+
+
 
 .fadeOut{
 	opacity: 0;
@@ -135,4 +131,8 @@ button{
 
 .invisivel{
 	display: none;
+}
+
+.fadeIn{
+	opacity: 100;
 }

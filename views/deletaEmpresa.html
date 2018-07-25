@@ -1,8 +1,7 @@
 <html lang="pt-br">
-
 	<head>
 		<meta charset="UTF-8">
-		<title>FITCARD - Empresas Cadastradas</title>
+		<title>FITCARD</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -18,6 +17,7 @@
     </header>
     <main>
       <section class="container">
+        <form action="/deletaEmpresa/post" method="post">
         <h2>Minhas Empresas</h2>
 				<div class="grupo">
 						<label for="filtro">Filtro:</label>
@@ -47,7 +47,7 @@
 
 				  </tbody>
         </table>
-
+        </form>
       </section>
 
 		</main>
@@ -58,10 +58,11 @@
 </main>
 
 
-    <script src="js/formAdicionaEmpresa.js"></script>
-		<script src="js/removeEmpresa.js"></script>
+
+		<script src="js/formAdicionaEmpresa.js"></script>
 		<script src="js/filtraEmpresa.js"></script>
 		<script src="js/buscaEmpresas.js"></script>
+		<script src="js/deletaEmpresa.js"></script>
 
   </body>
 
