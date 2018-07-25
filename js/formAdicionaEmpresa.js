@@ -83,7 +83,7 @@ function empresaValida(empresa){
     mensagemErro.push("Razão Social e CNPJ são campos obrigatórios!");
   }
 
-  if(empresa.categoria == "supermercado" && empresa.telefone.length == 0){
+  if(empresa.categoria == "Supermercado" && empresa.telefone.length == 0){
     mensagemErro.push("Para Supermercado o Telefone deve ser preenchido!");
   }
 
