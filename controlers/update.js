@@ -9,7 +9,7 @@ module.exports = function(app) {
   app.post('/updateEmpresa/post', function (req,res){
     var empresa = req.body;
     updateBanco(empresa);
-    res.redirect('/updateEmpresa');
+    res.redirect('/');
   });
 
 }

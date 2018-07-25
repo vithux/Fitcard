@@ -60,7 +60,7 @@
 
 <section class="container">
 	<section class="form">
-	<h2 id="titulo-form">Adicionar uma nova Empresa</h2>
+	<h2 id="titulo-form">Atualizar Empresa</h2>
 	<ul id="erro"></ul>
 	<form id="form-adiciona" action="/updateEmpresa/post" method="post">
 			<div class="grupo-master">
@@ -75,7 +75,7 @@
 
 			<div class="grupo">
 					<label for="cnpj">CNPJ:</label>
-					<input id="cnpj" name="cnpj" type="text" placeholder="CNPJ" class="campo">
+					<input id="cnpj" name="cnpj" type="text" placeholder="CNPJ" class="campo" readonly>
 			</div>
 
 			<div class="grupo">
@@ -131,9 +131,6 @@
 					<label for="conta">Conta:</label>
 					<input id="conta" name="conta" type="text" placeholder="Conta" class="campo">
 			</div>
-
-
-
 
 			<button id="adicionar-empresa" class="botao bto-principal">Atualizar</button>
 	</form>

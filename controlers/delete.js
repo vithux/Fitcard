@@ -1,4 +1,4 @@
-//var updateBanco = require("C:/Users/vitor/Desktop/FitCard/model/updateBanco");
+var deletaBanco = require("C:/Users/vitor/Desktop/FitCard/model/deletaBanco");
 
 
 module.exports = function(app) {
@@ -8,13 +8,9 @@ module.exports = function(app) {
 
 
   app.post('/deletaEmpresa/post', function (req,res){
-    var empresa = req;
-
-     //var elemento = elemento.querySelector(".cnpj").innerHTML;
-
-    //updateBanco(empresa);
-    console.log("postouuuu");
-    res.redirect('/deletaEmpresa');
+    var empresa = req.body;
+    deletaBanco(empresa);
+    res.redirect('/');
   });
 
 }

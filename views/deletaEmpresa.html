@@ -16,8 +16,7 @@
       </div>
     </header>
     <main>
-      <section class="container">
-        <form action="/deletaEmpresa/post" method="post">
+			<section class="container">
         <h2>Minhas Empresas</h2>
 				<div class="grupo">
 						<label for="filtro">Filtro:</label>
@@ -47,15 +46,37 @@
 
 				  </tbody>
         </table>
-        </form>
+
       </section>
 
-		</main>
+
+	<section class="container">
+		<section class="form">
+		<h2 id="titulo-form">Deseja Excluir essa Empresa?</h2>
+		<ul id="erro"></ul>
+		<form cass="grupo" id="form-adiciona"action="/deletaEmpresa/post" method="post">
+				<div class="grupo">
+						<label for="social">Razão Social:</label>
+						<input id="social" name="social" type="text" placeholder="Razão Social" class="campo" readonly>
+				</div>
+				<div class="grupo">
+						<label for="cnpj">CNPJ:</label>
+						<input id="cnpj" name="cnpj" type="text" placeholder="CNPJ" class="campo" readonly>
+				</div>
+
+				<button id="adicionar-empresa" class="botao bto-principal">Sim</button>
+		</form>
+		</br>
+		<form cass="grupo" action="/deletaEmpresa" method="get">
+				<button id="adicionar-empresa" class="botao bto-principal">Não</button>
+		</form>
 
 	</section>
-
+	</section>
 
 </main>
+
+
 
 
 

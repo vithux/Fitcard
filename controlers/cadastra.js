@@ -8,7 +8,7 @@ module.exports = function(app) {
   app.post('/cadastraEmpresa/post', function (req,res){
     var empresa = req.body;
     insertBanco(empresa);
-    res.redirect('/cadastraEmpresa');
+    res.redirect('/');
   });
 
 }
